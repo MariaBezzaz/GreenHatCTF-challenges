@@ -64,7 +64,7 @@ It wasn't a JWT token , it was a flask cookie
 
   ```flask-unsign --decode --cookie "eyJhZG1pbiI6ZmFsc2UsInVzZXJuYW1lIjoiZ3Vlc3QifQ.ZqOMzQ.SpPqBdMSQC6ojJADF2OrON3DVbc"```
 
-   Decoded JWT :
+   Decoded cookie :
 
   `{'admin': False, 'username': 'guest'}`
   
