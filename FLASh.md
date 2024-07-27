@@ -14,11 +14,11 @@
 
 ## Tools and Techniques
 
-**Tools:** flask-unsign, JSON Web Tokens (JWT) Decoder
+**Tools:** flask-unsign
 
 **Techniques:**
 
-- JWT decoding and encoding
+- Flask cookie decoding and encoding
 - Brute-forcing secret key
 - Cookie manipulation
 
@@ -44,6 +44,8 @@ Decoded JWT:
 
 **Step 3:** Tried to modify the payload directly and replace the token, but it was rejected by the server due to an invalid signature.
 
+It wasn't a JWT token , it was a flask cookie 
+
 ### Detailed Solution
 
 - **Step 1:** Identify the need to brute-force the secret key.
@@ -56,7 +58,7 @@ Decoded JWT:
 
   ```pip install flask-unsign```
 
-- **Step 3:** Decode the JWT using flask-unsign.
+- **Step 3:** Decode the flask cookie using flask-unsign.
   
   Command :
 
@@ -68,7 +70,7 @@ Decoded JWT:
   
 - **Step 4 :** Download the [rockyou.txt wordlist](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt).
   
-- **Step 5:** Use flask-unsign to brute-force the JWT using the rockyou.txt wordlist.
+- **Step 5:** Use flask-unsign to brute-force the cookie using the rockyou.txt wordlist.
 
   **Initial Attempt to Brute-force the Secret Key:**
   
